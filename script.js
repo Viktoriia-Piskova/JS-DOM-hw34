@@ -41,3 +41,25 @@ function displayPlaylist(track) {
     `
 }
 
+
+const openButtons = document.querySelectorAll('.btn-small');
+openButtons.forEach(() => addEventListener('click', openPopup));
+
+document.querySelector('.btn-large').addEventListener('click', closePopup);
+
+function openPopup(){
+    console.log("done")
+    const popup = document.querySelector('.closed');
+    popup.classList.remove('closed');
+    popup.classList.add('open')
+}
+
+
+function closePopup(){
+    console.log("done");
+    const popup = document.querySelector('.open');
+    popup.classList.remove('open');
+    popup.classList.add('closed')
+}
+
+
