@@ -35,31 +35,31 @@ function displayPlaylist(track) {
                 <p>${track.song}</p>
             </td>
             <td class="track__option">
-                <button class="btn-small" id="${track.author}">Open</button>
+                <button class="btnSmall" id="${track.author}">Open</button>
             </td>
         </tr>
     `
 }
 
 
-const openButtons = document.querySelectorAll('.btn-small');
-openButtons.forEach(() => addEventListener('click', openPopup));
+const openButtons = document.querySelectorAll('.btnSmall');
+openButtons.forEach((btn) => btn.addEventListener('click', openPopup));
 
-document.querySelector('.btn-large').addEventListener('click', closePopup);
+document.querySelector('#close').addEventListener('click', closePopup);
 
 function openPopup(){
-    console.log("done")
-    const popup = document.querySelector('.closed');
-    popup.classList.remove('closed');
+    console.log("open")
+    const popup = document.querySelector('.close');
+    popup.classList.remove('close');
     popup.classList.add('open')
 }
 
 
 function closePopup(){
-    console.log("done");
+    console.log("close");
     const popup = document.querySelector('.open');
     popup.classList.remove('open');
-    popup.classList.add('closed')
+    popup.classList.add('close')
 }
 
 
