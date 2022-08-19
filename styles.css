@@ -1,6 +1,8 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+
+
 .header {
     background-color: black;
     color: white;
@@ -19,6 +21,7 @@
     font-size: 3rem;
     margin: auto;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 .track{
@@ -42,7 +45,7 @@
 }
 
 td{
-    padding: 20px;
+    padding: 30px;
 }
 
 tr:nth-child(even){
@@ -56,6 +59,8 @@ tr:nth-child(even){
     position: absolute;
     top: 0px;
     left: 0px;
+    bottom: 0px;
+
 
 }
 .popup__body {
@@ -107,4 +112,12 @@ tr:nth-child(even){
     visibility: hidden;
     opacity: 0;
     transition: all 500ms;
+}
+
+.enabled-scroll{
+    overflow: auto;
+}
+
+.disabled-scroll{
+    overflow: hidden;
 }
